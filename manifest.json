@@ -1,0 +1,16 @@
+{
+    "name": "Notas App",
+    "short_name": "Notas",
+    "description": "Una aplicación simple para tomar notas.",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "icons": [
+        {
+            "src": "icons/icon.png",
+            "sizes": "255x255",
+            "type": "image/png"
+        }
+    ]
+}
