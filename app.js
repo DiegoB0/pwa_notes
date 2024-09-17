@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             
             const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Delete';
+            deleteButton.textContent = 'Borrar';
             deleteButton.classList.add('delete-button'); // Add this line
             deleteButton.onclick = () => deleteNote(index);
             li.appendChild(deleteButton);
