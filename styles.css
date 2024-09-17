@@ -1,27 +1,80 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-input {
-    padding: 10px;
-    width: 200px;
+.input {
+  padding: 10px;
+  width: 20rem;
+  border-radius: 1.3rem;
+  border: solid 1px #525252;
+  background-color: none;
+  font-size: medium;
+  padding: 1em;
+  color: #525252;
+  font-weight: 500;
 }
 
-button {
-    padding: 10px;
-    margin-left: 10px;
+.button:hover {
+  background: #68c898;
+}
+.button {
+  background: #31e189;
+  color: #f7f7f7;
+  border-radius: 1rem;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+
+}
+.note-list {
+  list-style: none;
+  text-transform: capitalize;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.note-list li {
+  position: relative;
+  border-radius: 0.3em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 4;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border: solid 1px #c9c9c9;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.6em;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-li {
-    background-color: #f4f4f4;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 4px;
+.delete-button {
+  position: absolute;
+  bottom: 0.3em;
+  right: 0.3em;
+  margin: 0.4em;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.2em 0.4em;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
 }

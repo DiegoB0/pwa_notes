@@ -6,12 +6,30 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadNotes() {
         const notes = JSON.parse(localStorage.getItem('notes')) || [];
         notesList.innerHTML = '';
-        notes.forEach(note => {
+        notes.forEach((note, index) => {
             const li = document.createElement('li');
             li.textContent = note;
+
+            
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Borrar';
+            deleteButton.classList.add('delete-button'); // Add this line
+            deleteButton.onclick = () => deleteNote(index);
+            li.appendChild(deleteButton);
+ 
+
             notesList.appendChild(li);
         });
     }
+
+
+    function deleteNote(index) {
+        const notes = JSON.parse(localStorage.getItem('notes')) || [];
+        notes.splice(index, 1);
+        localStorage.setItem('notes', JSON.stringify(notes));
+        loadNotes();
+    }
+
 
     function saveNote() {
         const note = noteInput.value.trim();
