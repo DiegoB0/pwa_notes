@@ -61,7 +61,7 @@ ul {
 }
 
 .delete-button {
-  position: absolute;
+  position: relative;
   bottom: 0.3em;
   right: 0.3em;
   margin: 0.4em;
